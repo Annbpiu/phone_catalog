@@ -1,0 +1,53 @@
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 80px 65px 25px;
+
+  @media screen and (max-width: 1199px) {
+    margin: 80px 25px 25px;
+  }
+
+  &_container {
+    overflow: hidden;
+    margin: 0 60px;
+
+    @media screen and (max-width: 1199px) {
+      max-width: 1199px;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  &_card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 16px;
+    transition: transform 0.3s ease-in-out;
+    margin-left: 8px;
+  }
+
+  &_shop {
+    margin: 80px 65px 25px;
+
+    @media screen and (max-width: 1199px) {
+      margin: 0 25px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    &_container {
+      @media screen and (max-width: 1199px) {
+        margin: 0 25px;
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &_prev {
+    margin-bottom: 80px;
+  }
+}
