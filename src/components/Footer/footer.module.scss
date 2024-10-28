@@ -1,0 +1,53 @@
+@import '.././colors.scss';
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-top: 1px solid $BORDER_COLOR;
+
+  @media screen and (max-width: 639px) {
+    flex-direction: column;
+    align-items: normal;
+    gap: 32px;
+  }
+
+  &_buttoms {
+    margin-right: 105px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $BUTTOM_TEXT_COLOR;
+
+    @media screen and (max-width: 1199px) {
+      margin-right: 25px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &_container {
+      @media screen and (max-width: 639px) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+
+        padding: 0 20px;
+      }
+    }
+  }
+
+  &_top {
+    color: $BUTTOM_TEXT_COLOR;
+
+    @media screen and (max-width: 639px) {
+      margin: 0 0 30px 36%;
+    }
+
+    &_button {
+      margin-left: 16px;
+    }
+  }
+}

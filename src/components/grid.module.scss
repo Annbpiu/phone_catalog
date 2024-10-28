@@ -1,0 +1,120 @@
+@import '/src/components/colors.scss';
+
+.grid {
+  display: grid;
+  justify-content: center;
+
+  grid-template-columns: repeat(24, 32px);
+  gap: 16px;
+
+  @media screen and (max-width: 639px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 1199px) {
+    grid-template-columns: repeat(12, 32px);
+    margin: 0 10px;
+  }
+
+  @media screen and (max-width: 639px) {
+    grid-template-columns: repeat(4, 60px);
+    margin: 0 10px;
+  }
+
+  @media screen and (max-width: 639px) {
+    margin: 0;
+    width: 100%;
+  }
+
+  &_h1 {
+    grid-column: 1 / 20;
+
+    @media screen and (max-width: 1200px) {
+      grid-column: 1 / 10;
+    }
+
+    @media screen and (max-width: 639px) {
+      grid-column: 1 / 5;
+    }
+  }
+
+  &_carousel {
+    height: 100%;
+
+    grid-column: 2 / 24;
+
+    @media screen and (max-width: 1200px) {
+      grid-column: 2 / 12;
+    }
+
+    @media screen and (max-width: 639px) {
+
+    }
+  }
+
+  &_left_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 94%;
+    width: 32px;
+
+    border: 1px solid $CAROUSEL_BUTTOMS_COLOR;
+    text-decoration: none;
+    grid-column: 1;
+
+    @media screen and (max-width: 1200px) {
+      height: 87.5%;
+    }
+
+    @media screen and (max-width: 639px) {
+      display: none;
+    }
+
+    &:hover {
+      transition: 0.7s;
+      opacity: 45%;
+      color: $HOVER_BUTTON_COLOR;
+    }
+  }
+
+  &_right_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 94%;
+    width: 32px;
+
+    border: 1px solid $CAROUSEL_BUTTOMS_COLOR;
+    text-decoration: none;
+    grid-column: 24 / 25;
+    color: $CAROUSEL_BUTTOMS_COLOR;
+
+    @media screen and (max-width: 1200px) {
+      height: 87.5%;
+    }
+
+    @media screen and (max-width: 639px) {
+      display: none;
+    }
+
+    &:hover {
+      color: $HOVER_BUTTON_COLOR;
+      transition: 0.7s;
+      opacity: 45%;
+    }
+
+    @media screen and (max-width: 1200px) {
+      grid-column: 12 / 12;
+    }
+  }
+
+  &_slider {
+    transform: translateX(0);
+    grid-column: calc((100% - 32px) / 4);
+    overflow: hidden;
+  }
+}

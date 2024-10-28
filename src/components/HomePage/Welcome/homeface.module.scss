@@ -1,0 +1,151 @@
+@import '/src/components/colors.scss';
+
+.home_page {
+  @media screen and (min-width: 1200px) {
+    width: 1270px;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 1270px;
+    margin: 0 30px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    margin: 0 10px;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 639px) {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.home_font {
+  font-family: 'Mont-Bold';
+  color: $HOVER_BUTTON_COLOR;
+  font-size: 48px;
+
+  margin: 56px 0;
+
+  @media screen and (max-width: 639px) {
+    font-size: 32px;
+
+    margin: 25px 15px;
+  }
+
+  &_h2 {
+    font-family: 'Mont-Bold';
+    color: $HOVER_BUTTON_COLOR;
+
+    font-size: 32px;
+
+    margin: 0;
+
+    @media screen and (max-width: 639px) {
+      font-size: 22px;
+    }
+  }
+}
+
+.slide_container {
+  width: 100%;
+  height: 44.7vh;
+  overflow: hidden;
+  position: relative;
+
+  @media screen and (max-width: 1200px) {
+    height: 180px;
+  }
+
+  @media screen and (max-width: 639px) {
+    height: 350px;
+  }
+
+  &_buttoms {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.slide_buttoms {
+  margin: 10px 10px;
+  height: 4px;
+  width: 14px;
+  background-color: $BORDER_COLOR;
+  border: 0;
+  cursor: pointer;
+
+  &_active {
+    transition: all 1.2s;
+    background-color: $HOVER_BUTTON_COLOR;
+  }
+}
+
+.home_slide {
+  z-index: 0;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+  transition: opacity 0.9s ease;
+
+  background-size: cover;
+  background-position: center;
+  background-color: $HOVER_BUTTON_COLOR;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+
+  @media screen and (max-width: 1200px) {
+    background-size: contain;
+    object-fit: contain;
+  }
+
+  @media screen and (max-width: 639px) {
+    object-fit: cover;
+  }
+
+  &_active {
+    z-index: 3;
+    opacity: 1;
+  }
+
+  &_previous {
+    z-index: 1;
+    opacity: 0;
+  }
+}
+
+.product_slide {
+  &_buttons {
+    height: 32px;
+    width: 32px;
+    border: 1px solid $CAROUSEL_BUTTOMS_COLOR;
+    background-color: transparent;
+    cursor: pointer;
+    padding: auto;
+
+    color: black;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    &_disable {
+      color: $BORDER_COLOR;
+      height: 32px;
+      width: 32px;
+      border: 1px solid $BORDER_COLOR;
+    }
+
+    &:first-child {
+      margin-right: 16px;
+    }
+  }
+
+  &_slider {
+    display: grid;
+    grid-column: 1 / 24;
+    grid-template-columns: subgrid;
+  }
+}
