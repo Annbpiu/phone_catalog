@@ -13,5 +13,8 @@ I developed a responsive and user-friendly phone catalog application using moder
 
 This project demonstrates my ability to build interactive, scalable, and maintainable front-end applications, combining design and functionality to deliver a high-quality user experience.
 
+Demo: 
+ - [DEMO LINK](https://annbpiu.github.io/phone_catalog/)
+
 I use this landing: 
  - [MACKUP](https://www.figma.com/design/T5ttF21UnT6RRmCQQaZc6L/Phone-catalog-(V2)-Original?node-id=0-1&node-type=canvas&t=PRuU3YPjj0GNHOys-0)
