@@ -173,8 +173,9 @@ export const ShopingCart = () => {
           </div>
         )}
       </div>
-
-      <Footer />
+      <div className={imgstyles.footer}>
+        <Footer />
+      </div>
     </div>
   );
 };

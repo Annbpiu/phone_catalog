@@ -66,7 +66,9 @@ export const FavoriteCart = () => {
           </>
         )}
       </div>
-      <Footer />
+      <div className={styles.footer}>
+        <Footer />
+      </div>
     </div>
   );
 };

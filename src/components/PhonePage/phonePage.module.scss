@@ -68,10 +68,6 @@
     flex-wrap: wrap;
     margin: 0;
     gap: 16px;
-
-    @media screen and (max-width: 1199px) {
-      justify-content: center;
-    }
   }
 
   &_select {
