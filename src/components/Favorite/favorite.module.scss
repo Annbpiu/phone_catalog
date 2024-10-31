@@ -18,16 +18,25 @@
   }
 
   &_page {
+    display: block;
     margin: 0 10%;
-    flex: 1;
+    flex-grow: 1;
 
     @media screen and (max-width: 1199px) {
       margin: 0 2%;
     }
 
+    @media screen and (max-width: 639px) {
+      margin: 0 2% 20%;
+    }
+
     &_container {
       flex-direction: column;
       min-height: 100vh;
+
+      @media screen and (min-width: 639px) {
+        display: flex;
+      }
     }
   }
 
@@ -40,7 +49,7 @@
 }
 
 .footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   right: 0;
   left: 0;

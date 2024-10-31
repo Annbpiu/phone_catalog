@@ -32,6 +32,10 @@
       justify-content: start;
       max-height: 100%;
     }
+
+    @media screen and (max-width: 639px) {
+      margin-bottom: 20%;
+    }
   }
 
   &_name {
@@ -51,7 +55,7 @@
     flex-shrink: 0;
     border: 1px solid $BORDER_COLOR;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
     margin: 0 auto;
 
@@ -90,6 +94,7 @@
     &_bottom {
       display: flex;
       align-items: center;
+      margin-right: 20px;
     }
   }
 
